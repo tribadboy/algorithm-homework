@@ -20,8 +20,7 @@ class Solution:
             val_list = []
             for node in stack:
                 val_list.append(node.val)
-                if node.children is not None:
-                    new_stack += node.children
+                new_stack += node.children
             stack = new_stack
             result.append(val_list)
         return result
