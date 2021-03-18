@@ -1,12 +1,16 @@
+# -*- coding:utf-8 -*-
+from typing import List
+import collections
+
 class Solution:
     def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
 
-        def getNextList(word, endWord, word_map):
+        def getNextList(word, word_map):
             result = []
             for i in range(len(word)):
                 for j in range(26):
                     new_word = word[:i] + chr(ord('a') + j) + word[i + 1:]
-                    if word[i] != chr(ord('a') + j) and word_map.get(new_word, None) == False:
+                    if word[i] != chr(ord('a') + j) and word_map.get(new_word, '') == False:
                         result.append(new_word)
             return result
 

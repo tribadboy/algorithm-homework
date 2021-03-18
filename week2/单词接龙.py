@@ -12,7 +12,7 @@ class Solution:
             for i in range(0, len(word)):
                 for j in range(26):
                     new_word = word[:i] + chr(ord('a') + j) + word[i + 1:]
-                    if word[i] != chr(ord('a') + j) and word_map.get(new_word, None) == False:
+                    if word[i] != chr(ord('a') + j) and word_map.get(new_word, '') == False:
                         result.append(new_word)
                         word_map[new_word] = True
             return result
