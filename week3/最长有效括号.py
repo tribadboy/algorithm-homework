@@ -3,7 +3,7 @@
 class Solution:
 
     # 方法1: stack
-    def longestValidParentheses1(self, s: str) -> int:
+    def longestValidParentheses(self, s: str) -> int:
         stack = [-1]
         max_len = 0
         for i in range(len(s)):
